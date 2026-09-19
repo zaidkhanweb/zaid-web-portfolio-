@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="Placeholder preview of the Detailing Lab demo website">
+  <rect width="800" height="520" fill="#EDE8DE"/>
+  <rect x="40" y="40" width="720" height="440" rx="10" fill="#FFFDF9" stroke="#DED5C2" stroke-width="1.5"/>
+  <rect x="40" y="40" width="720" height="46" rx="10" fill="#1F2937"/>
+  <circle cx="66" cy="63" r="5" fill="#F6F2EA" opacity="0.5"/>
+  <circle cx="84" cy="63" r="5" fill="#F6F2EA" opacity="0.5"/>
+  <circle cx="102" cy="63" r="5" fill="#F6F2EA" opacity="0.5"/>
+  <rect x="70" y="120" width="300" height="26" fill="#1F2937"/>
+  <rect x="70" y="160" width="420" height="12" fill="#C9C2B2"/>
+  <rect x="70" y="182" width="360" height="12" fill="#C9C2B2"/>
+  <rect x="70" y="222" width="150" height="40" rx="6" fill="#1F2937"/>
+  <g opacity="0.9">
+    <path d="M470 300 L730 300 L700 250 Q690 235 665 235 L535 235 Q510 235 500 250 Z" fill="#1F2937"/>
+    <rect x="470" y="300" width="260" height="70" rx="10" fill="#2B3241"/>
+    <circle cx="530" cy="372" r="22" fill="#0F1319"/>
+    <circle cx="670" cy="372" r="22" fill="#0F1319"/>
+    <rect x="545" y="255" width="60" height="30" rx="4" fill="#EDE8DE" opacity="0.7"/>
+    <rect x="615" y="255" width="60" height="30" rx="4" fill="#EDE8DE" opacity="0.7"/>
+  </g>
+</svg>

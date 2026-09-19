@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="Placeholder preview of the Bari Dental Clinic demo website">
+  <rect width="800" height="520" fill="#EDE8DE"/>
+  <rect x="40" y="40" width="720" height="440" rx="10" fill="#FFFDF9" stroke="#DED5C2" stroke-width="1.5"/>
+  <rect x="40" y="40" width="720" height="46" rx="10" fill="#204A3D"/>
+  <circle cx="66" cy="63" r="5" fill="#F6F2EA" opacity="0.5"/>
+  <circle cx="84" cy="63" r="5" fill="#F6F2EA" opacity="0.5"/>
+  <circle cx="102" cy="63" r="5" fill="#F6F2EA" opacity="0.5"/>
+  <rect x="70" y="120" width="280" height="24" fill="#204A3D"/>
+  <rect x="70" y="158" width="380" height="12" fill="#C9C2B2"/>
+  <rect x="70" y="180" width="320" height="12" fill="#C9C2B2"/>
+  <rect x="70" y="218" width="140" height="38" rx="19" fill="#204A3D"/>
+  <g>
+    <rect x="470" y="150" width="120" height="100" rx="10" fill="#E4EEE9" stroke="#2F6B57" stroke-width="1.5"/>
+    <rect x="610" y="150" width="120" height="100" rx="10" fill="#E4EEE9" stroke="#2F6B57" stroke-width="1.5"/>
+    <rect x="470" y="270" width="120" height="100" rx="10" fill="#E4EEE9" stroke="#2F6B57" stroke-width="1.5"/>
+    <rect x="610" y="270" width="120" height="100" rx="10" fill="#E4EEE9" stroke="#2F6B57" stroke-width="1.5"/>
+    <circle cx="530" cy="190" r="14" fill="#2F6B57"/>
+    <circle cx="670" cy="190" r="14" fill="#2F6B57"/>
+    <circle cx="530" cy="310" r="14" fill="#2F6B57"/>
+    <circle cx="670" cy="310" r="14" fill="#2F6B57"/>
+  </g>
+</svg>

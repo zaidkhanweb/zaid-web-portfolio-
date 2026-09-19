@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="Placeholder preview of the Karachi Prime Estate demo website">
+  <rect width="800" height="520" fill="#EDE8DE"/>
+  <rect x="40" y="40" width="720" height="440" rx="10" fill="#FFFDF9" stroke="#DED5C2" stroke-width="1.5"/>
+  <rect x="40" y="40" width="720" height="46" rx="10" fill="#7C5A32"/>
+  <circle cx="66" cy="63" r="5" fill="#F6F2EA" opacity="0.5"/>
+  <circle cx="84" cy="63" r="5" fill="#F6F2EA" opacity="0.5"/>
+  <circle cx="102" cy="63" r="5" fill="#F6F2EA" opacity="0.5"/>
+  <rect x="70" y="120" width="300" height="24" fill="#7C5A32"/>
+  <rect x="70" y="158" width="380" height="12" fill="#C9C2B2"/>
+  <g>
+    <rect x="70" y="220" width="200" height="140" rx="8" fill="#F1E7D4" stroke="#B8935B" stroke-width="1.5"/>
+    <rect x="290" y="220" width="200" height="140" rx="8" fill="#F1E7D4" stroke="#B8935B" stroke-width="1.5"/>
+    <rect x="510" y="220" width="200" height="140" rx="8" fill="#F1E7D4" stroke="#B8935B" stroke-width="1.5"/>
+    <rect x="90" y="240" width="160" height="66" rx="4" fill="#B8935B"/>
+    <rect x="310" y="240" width="160" height="66" rx="4" fill="#B8935B"/>
+    <rect x="530" y="240" width="160" height="66" rx="4" fill="#B8935B"/>
+    <rect x="90" y="320" width="120" height="10" fill="#7C5A32"/>
+    <rect x="310" y="320" width="120" height="10" fill="#7C5A32"/>
+    <rect x="530" y="320" width="120" height="10" fill="#7C5A32"/>
+    <rect x="90" y="338" width="70" height="8" fill="#C9BBA1"/>
+    <rect x="310" y="338" width="70" height="8" fill="#C9BBA1"/>
+    <rect x="530" y="338" width="70" height="8" fill="#C9BBA1"/>
+  </g>
+</svg>

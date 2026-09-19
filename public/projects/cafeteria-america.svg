@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="Placeholder preview of the Cafeteria America demo website">
+  <rect width="800" height="520" fill="#EDE8DE"/>
+  <rect x="40" y="40" width="720" height="440" rx="10" fill="#FFFDF9" stroke="#DED5C2" stroke-width="1.5"/>
+  <rect x="40" y="40" width="720" height="46" rx="10" fill="#8C3B2E"/>
+  <circle cx="66" cy="63" r="5" fill="#F6F2EA" opacity="0.5"/>
+  <circle cx="84" cy="63" r="5" fill="#F6F2EA" opacity="0.5"/>
+  <circle cx="102" cy="63" r="5" fill="#F6F2EA" opacity="0.5"/>
+  <rect x="70" y="120" width="260" height="24" fill="#8C3B2E"/>
+  <rect x="70" y="158" width="360" height="12" fill="#C9C2B2"/>
+  <rect x="70" y="200" width="150" height="40" rx="20" fill="#8C3B2E"/>
+  <g>
+    <circle cx="600" cy="250" r="110" fill="#F1E1DC"/>
+    <circle cx="600" cy="250" r="80" fill="#FFFDF9" stroke="#8C3B2E" stroke-width="2"/>
+    <circle cx="600" cy="250" r="34" fill="#D9A87A"/>
+    <circle cx="586" cy="240" r="6" fill="#8C3B2E"/>
+    <circle cx="612" cy="245" r="5" fill="#8C3B2E"/>
+    <circle cx="598" cy="262" r="5.5" fill="#8C3B2E"/>
+  </g>
+</svg>
