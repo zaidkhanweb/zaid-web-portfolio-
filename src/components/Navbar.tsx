@@ -23,8 +23,8 @@ export default function Navbar() {
     <header
       className={`sticky top-0 z-50 border-b transition-colors ${
         scrolled
-          ? "border-ink-line/15 bg-paper/90 backdrop-blur"
-          : "border-transparent bg-paper"
+          ? "border-white/10 bg-[#0F2233]/95 backdrop-blur"
+          : "border-transparent bg-[#0F2233]"
       }`}
     >
       <nav
@@ -33,7 +33,7 @@ export default function Navbar() {
       >
         <a
           href="#home"
-          className="font-display text-lg font-semibold tracking-tight text-ink"
+          className="font-display text-lg font-semibold tracking-tight text-white"
         >
           {SITE_BRAND}
         </a>
@@ -43,7 +43,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="group relative text-sm font-medium text-ink/70 transition-colors hover:text-ink"
+                className="group relative text-sm font-medium text-white/75 transition-colors hover:text-white"
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 h-px w-0 bg-moss-deep transition-all duration-200 ease-out-soft group-hover:w-full" />
@@ -54,14 +54,14 @@ export default function Navbar() {
 
         <a
           href="#contact"
-          className="hidden rounded-md bg-ink px-5 py-2.5 text-sm font-medium text-paper transition-all duration-200 ease-out-soft hover:-translate-y-0.5 hover:bg-ink-soft md:inline-block"
+          className="hidden rounded-md bg-white px-5 py-2.5 text-sm font-medium text-[#0F2233] shadow-sm transition-all duration-200 ease-out-soft hover:-translate-y-0.5 hover:bg-paper md:inline-block"
         >
           Let&rsquo;s Talk
         </a>
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-ink-line/30 md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/25 text-white md:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -80,7 +80,7 @@ export default function Navbar() {
       {open && (
         <div
           id="mobile-menu"
-          className="border-t border-ink-line/15 bg-paper px-6 pb-6 pt-2 md:hidden"
+          className="border-t border-white/10 bg-[#0F2233] px-6 pb-6 pt-2 md:hidden"
         >
           <ul className="flex flex-col gap-1">
             {NAV_LINKS.map((link) => (
@@ -88,7 +88,7 @@ export default function Navbar() {
                 <a
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-md px-3 py-3 text-base font-medium text-ink/80 hover:bg-paper-dim hover:text-ink"
+                  className="block rounded-md px-3 py-3 text-base font-medium text-white/80 hover:bg-white/10 hover:text-white"
                 >
                   {link.label}
                 </a>
@@ -98,7 +98,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="mt-3 block rounded-md bg-ink px-5 py-3 text-center text-sm font-medium text-paper"
+            className="mt-3 block rounded-md bg-white px-5 py-3 text-center text-sm font-medium text-[#0F2233]"
           >
             Let&rsquo;s Talk
           </a>

@@ -124,3 +124,13 @@
     }
   }
 }
+
+/* Final hero process visual */
+.hero-dot-field {
+  background-image: radial-gradient(rgba(47, 107, 87, 0.32) 1px, transparent 1.2px);
+  background-size: 15px 15px;
+}
+.hero-handwritten {
+  font-family: "Comic Sans MS", "Segoe Print", cursive;
+  font-weight: 600;
+}

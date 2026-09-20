@@ -1,215 +1,52 @@
 import type { ReactNode } from "react";
-import {
-  BoltIcon,
-  CodeIcon,
-  CursorIcon,
-  DevicesIcon,
-  StorefrontIcon,
-} from "./HeroIcons";
+import { BoltIcon, PhoneIcon, StorefrontIcon } from "./HeroIcons";
 
-/**
- * A small, abstract "web design workspace": a wireframe browser window on a
- * dotted design canvas, with a mobile preview, a type/colour chip and a few
- * labels. Everything is plain HTML/CSS (no images), and it is deliberately
- * not a screenshot of any real project.
- */
-
-const DOT_GRID = {
-  backgroundImage:
-    "radial-gradient(rgba(20, 24, 31, 0.14) 1px, transparent 1.3px)",
-  backgroundSize: "18px 18px",
-};
-
-const RULER_TICKS = {
-  backgroundImage:
-    "repeating-linear-gradient(90deg, rgba(20, 24, 31, 0.2) 0 1px, transparent 1px 12px)",
-};
+const steps = [
+  { title: "Idea", text: "Understand the business", icon: <BulbIcon /> },
+  { title: "Design", text: "Plan the website", icon: <PencilIcon /> },
+  { title: "Build", text: "Build & optimize", icon: <CodeMark /> },
+  { title: "Launch", text: "Ready to go live", icon: <RocketIcon /> },
+];
 
 export default function HeroVisual() {
   return (
-    <div
-      className="hero-rise mx-auto w-full max-w-[30rem] sm:max-w-[34rem] lg:max-w-none"
-      style={{ animationDelay: "200ms" }}
-      aria-hidden="true"
-    >
-      <div className="relative aspect-[10/11] sm:aspect-[6/5] lg:aspect-[9/10]">
-        {/* Design canvas: dotted grid with a ruler strip along the top */}
-        <div
-          className="absolute inset-0 overflow-hidden rounded-2xl border border-ink-line/15 bg-paper-card/60"
-          style={DOT_GRID}
-        >
-          <div
-            className="absolute inset-x-0 top-0 h-2 border-b border-ink-line/10 bg-paper-card/70"
-            style={RULER_TICKS}
-          />
-        </div>
+    <div className="hero-rise relative mx-auto w-full max-w-[39rem] py-6 lg:py-0" style={{ animationDelay: "180ms" }}>
+      <div className="mb-6 flex justify-center lg:justify-start lg:pl-16">
+        <p className="hero-handwritten -rotate-3 text-center text-xl leading-tight text-[#0F2233] sm:text-2xl">A simple process.<br />Real results.</p>
+        <svg className="ml-3 mt-5 hidden h-12 w-16 text-[#0F2233] sm:block" viewBox="0 0 70 48" fill="none"><path d="M3 7c25-4 46 8 55 27" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/><path d="m51 31 8 5 2-10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+      </div>
 
-        {/* Wireframe browser window */}
-        <div className="absolute left-[5%] top-[16%] w-[84%] sm:top-[11%]">
-          <div className="absolute inset-0 translate-x-3 translate-y-3 rounded-xl bg-moss-light sm:translate-x-4 sm:translate-y-4" />
-          <div className="relative overflow-hidden rounded-xl border border-ink-line/25 bg-paper-card shadow-frame">
-            <div className="flex items-center gap-1.5 border-b border-ink-line/15 px-3.5 py-2.5">
-              <span className="h-2 w-2 rounded-full bg-ink/15" />
-              <span className="h-2 w-2 rounded-full bg-ink/15" />
-              <span className="h-2 w-2 rounded-full bg-ink/15" />
-              <span className="ml-3 h-4 flex-1 rounded-full bg-paper-dim" />
-            </div>
-
-            <div className="space-y-4 px-3.5 pb-5 pt-3.5 sm:p-4">
-              {/* Site nav */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <span className="h-4 w-4 rounded bg-moss" />
-                  <span className="h-1.5 w-10 rounded-full bg-ink/70" />
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="hidden h-1.5 w-7 rounded-full bg-ink/15 sm:block" />
-                  <span className="hidden h-1.5 w-7 rounded-full bg-ink/15 sm:block" />
-                  <span className="h-1.5 w-7 rounded-full bg-ink/15" />
-                  <span className="ml-1 h-4 w-10 rounded bg-ink" />
-                </div>
-              </div>
-
-              {/* Site hero: heading, copy, button + image placeholder */}
-              <div className="grid grid-cols-5 items-center gap-4">
-                <div className="relative col-span-3 space-y-2.5 py-1.5">
-                  {/* Selection outline with corner handles */}
-                  <div className="pointer-events-none absolute -inset-2 rounded-sm border border-moss">
-                    <Handle className="-left-[3px] -top-[3px]" />
-                    <Handle className="-right-[3px] -top-[3px]" />
-                    <Handle className="-bottom-[3px] -left-[3px]" />
-                    <Handle className="-bottom-[3px] -right-[3px]" />
-                  </div>
-                  <span className="block h-3 w-full rounded-sm bg-ink" />
-                  <span className="block h-3 w-3/4 rounded-sm bg-ink" />
-                  <span className="mt-3.5 block h-1.5 w-full rounded-full bg-ink/15" />
-                  <span className="block h-1.5 w-5/6 rounded-full bg-ink/15" />
-                  <div className="relative pt-1.5">
-                    <span className="block h-5 w-16 rounded bg-moss" />
-                    <div className="hero-cursor absolute left-11 top-4">
-                      <CursorIcon />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="relative col-span-2 aspect-square overflow-hidden rounded-md bg-moss-light">
-                  <svg
-                    viewBox="0 0 100 100"
-                    preserveAspectRatio="none"
-                    className="absolute inset-0 h-full w-full text-moss/25"
-                  >
-                    <path
-                      d="M0 0 100 100M100 0 0 100"
-                      stroke="currentColor"
-                      strokeWidth="1"
-                      vectorEffect="non-scaling-stroke"
-                    />
-                  </svg>
-                </div>
-              </div>
-
-              {/* Card row (hidden on small screens to keep the visual simple) */}
-              <div className="hidden grid-cols-3 gap-2.5 sm:grid">
-                {[0, 1, 2].map((i) => (
-                  <div
-                    key={i}
-                    className="rounded-md border border-ink-line/15 p-2"
-                  >
-                    <span className="block h-7 rounded bg-paper-dim" />
-                    <span className="mt-2 block h-1.5 w-3/4 rounded-full bg-ink/20" />
-                    <span className="mt-1.5 block h-1.5 w-1/2 rounded-full bg-ink/10" />
-                  </div>
-                ))}
-              </div>
-            </div>
+      <div className="relative grid grid-cols-1 gap-4 sm:grid-cols-4 sm:gap-3">
+        <svg className="pointer-events-none absolute left-[10%] top-[45%] hidden h-12 w-[80%] text-moss sm:block" viewBox="0 0 500 50" preserveAspectRatio="none" fill="none" aria-hidden="true"><path d="M0 20 C45 2 75 42 120 22 S195 3 240 23 S315 42 360 22 S435 3 500 23" stroke="currentColor" strokeWidth="2" strokeDasharray="4 7" strokeLinecap="round"/></svg>
+        {steps.map((step, i) => (
+          <div key={step.title} className="relative z-10 flex min-h-[12.5rem] flex-col items-center rounded-2xl border border-ink-line/10 bg-paper-card/80 px-3 py-5 text-center shadow-card backdrop-blur-sm sm:min-h-[13rem]">
+            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-moss-light text-[#0F2233]">{step.icon}</div>
+            <p className="mt-4 text-base font-semibold text-[#0F2233]">{i + 1}. {step.title}</p>
+            <p className="mt-2 text-sm leading-snug text-ink/65">{step.text}</p>
           </div>
-        </div>
+        ))}
+      </div>
 
-        {/* Mobile preview */}
-        <div className="absolute bottom-[6%] right-[4%] hidden w-[23%] sm:block">
-          <div className="hero-float" style={{ animationDelay: "-2s" }}>
-            <div className="aspect-[9/18] rounded-[1.25rem] border-2 border-ink bg-paper-card p-2 shadow-lift">
-              <div className="flex h-full flex-col gap-2">
-                <span className="mx-auto h-1 w-6 rounded-full bg-ink/25" />
-                <span className="h-3 rounded-sm bg-ink" />
-                <span className="h-1.5 w-2/3 rounded-full bg-ink/15" />
-                <span className="flex-1 rounded bg-moss-light" />
-                <span className="h-4 rounded bg-moss" />
-                <span className="h-1.5 rounded-full bg-ink/15" />
-                <span className="h-1.5 w-3/4 rounded-full bg-ink/15" />
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="mt-5 flex items-center justify-end gap-2 pr-2 text-[#0F2233]">
+        <svg className="h-10 w-24 text-moss" viewBox="0 0 100 42" fill="none"><path d="M2 4c16 29 48 32 82 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/><path d="m78 22 8 6-8 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+        <span className="hero-handwritten -rotate-2 rounded-lg bg-moss-light px-3 py-1.5 text-lg">Website Live</span>
+      </div>
 
-        {/* Type + colour chip */}
-        <div className="absolute bottom-[19%] left-[1.5%] hidden -rotate-2 sm:block">
-          <div className="flex items-center gap-3 rounded-xl border border-ink-line/15 bg-paper-card py-2 pl-3.5 pr-3 shadow-card">
-            <span className="font-display text-2xl leading-none text-ink">
-              Aa
-            </span>
-            <span className="flex items-center gap-1">
-              <span className="h-3.5 w-3.5 rounded-full bg-ink" />
-              <span className="h-3.5 w-3.5 rounded-full bg-moss" />
-              <span className="h-3.5 w-3.5 rounded-full border border-ink-line/25 bg-paper" />
-            </span>
-          </div>
-        </div>
-
-        {/* Labels */}
-        <Chip
-          icon={<DevicesIcon size={15} />}
-          label="Responsive"
-          className="left-[3%] top-[4.5%]"
-        />
-        <Chip
-          icon={<BoltIcon size={15} />}
-          label="Fast"
-          className="bottom-[4%] right-[4%] sm:bottom-auto sm:right-auto sm:left-[44%] sm:top-[3.5%]"
-          float
-        />
-        <Chip
-          icon={<StorefrontIcon size={15} />}
-          label="Business-focused"
-          className="bottom-[4%] left-[3%] sm:bottom-[6%] sm:left-[5%]"
-        />
-
-        {/* Code badge */}
-        <div className="absolute right-[3.5%] top-[3%] flex h-9 w-9 items-center justify-center rounded-lg bg-ink text-paper shadow-card">
-          <CodeIcon size={16} />
-        </div>
+      <div className="mt-7 grid gap-3 rounded-2xl border border-ink-line/10 bg-white/25 p-3 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-ink-line/10">
+        <Feature icon={<PhoneIcon />} label="Mobile Friendly" />
+        <Feature icon={<BoltIcon />} label="Fast Loading" />
+        <Feature icon={<StorefrontIcon />} label="Business-focused" />
       </div>
     </div>
   );
 }
 
-function Chip({
-  icon,
-  label,
-  className,
-  float = false,
-}: {
-  icon: ReactNode;
-  label: string;
-  className: string;
-  float?: boolean;
-}) {
-  return (
-    <div className={`absolute ${className}`}>
-      <div className={float ? "hero-float" : undefined}>
-        <div className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-ink-line/15 bg-paper-card py-1.5 pl-2.5 pr-3.5 text-[13px] font-medium text-ink shadow-card">
-          <span className="text-moss">{icon}</span>
-          {label}
-        </div>
-      </div>
-    </div>
-  );
+function Feature({ icon, label }: { icon: ReactNode; label: string }) {
+  return <div className="flex items-center justify-center gap-3 px-3 py-2"><span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-moss-light text-[#0F2233]">{icon}</span><span className="text-sm font-medium text-[#0F2233]">{label}</span></div>;
 }
 
-function Handle({ className }: { className: string }) {
-  return (
-    <span
-      className={`absolute h-1.5 w-1.5 border border-moss bg-paper-card ${className}`}
-    />
-  );
-}
+function BaseIcon({ children }: { children: ReactNode }) { return <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{children}</svg>; }
+function BulbIcon() { return <BaseIcon><path d="M9 18h6M10 21h4"/><path d="M8.2 14.5C6.8 13.4 6 11.8 6 10a6 6 0 1 1 12 0c0 1.8-.8 3.4-2.2 4.5-.8.7-1.3 1.4-1.5 2.5H9.7c-.2-1.1-.7-1.8-1.5-2.5Z"/></BaseIcon>; }
+function PencilIcon() { return <BaseIcon><path d="m4 20 4.2-1 10-10-3.2-3.2-10 10L4 20Z"/><path d="m13.8 7 3.2 3.2M14.8 4.8l1.4-1.4a1.5 1.5 0 0 1 2.1 0l2.3 2.3a1.5 1.5 0 0 1 0 2.1L19.2 9.2"/></BaseIcon>; }
+function CodeMark() { return <BaseIcon><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></BaseIcon>; }
+function RocketIcon() { return <BaseIcon><path d="M14 5c2.5-2.5 5.8-2 5.8-2s.5 3.3-2 5.8l-5.3 5.3-3.3-3.3L14 5Z"/><path d="M9.5 7.8 6 7l-3 3 5.2 1.3M16.2 14.5 17 18l-3 3-1.3-5.2M7.5 16.5 4 20l4.8-1.3"/><circle cx="16" cy="7" r="1.2"/></BaseIcon>; }
