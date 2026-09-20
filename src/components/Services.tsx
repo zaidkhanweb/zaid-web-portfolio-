@@ -40,21 +40,37 @@ export default function Services() {
   return (
     <section id="services" className="bg-paper py-24">
       <div className="mx-auto max-w-6xl px-6">
-        <h2 className="max-w-xl font-display text-3xl text-ink sm:text-4xl">
-          Websites built around your business
-        </h2>
+        <div className="grid gap-10 md:grid-cols-12 md:gap-8">
+          <div className="md:col-span-4">
+            <h2 className="font-display text-3xl text-ink sm:text-4xl">
+              Websites built around your business
+            </h2>
+            <p className="mt-4 max-w-sm text-base leading-relaxed text-ink/65">
+              Everything below is explained the way I&rsquo;d explain it to
+              you directly — no jargon, just what it does for your business.
+            </p>
+          </div>
 
-        <div className="mt-12 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <div key={service.title} className="border-t border-ink-line/20 pt-5">
-              <h3 className="font-display text-lg text-ink">
-                {service.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink/65">
-                {service.description}
-              </p>
-            </div>
-          ))}
+          <div className="md:col-span-8">
+            <ul className="border-t border-ink-line/20">
+              {services.map((service, i) => (
+                <li
+                  key={service.title}
+                  className="group grid grid-cols-[2.5rem_1fr] items-baseline gap-x-4 border-b border-ink-line/20 py-6 transition-colors sm:grid-cols-[3rem_14rem_1fr] sm:gap-x-8"
+                >
+                  <span className="font-display text-sm text-ink/30 transition-colors group-hover:text-moss-deep">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="font-display text-lg text-ink">
+                    {service.title}
+                  </h3>
+                  <p className="col-span-2 mt-1.5 text-sm leading-relaxed text-ink/65 sm:col-span-1 sm:mt-0">
+                    {service.description}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>

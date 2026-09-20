@@ -43,9 +43,10 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm font-medium text-ink/70 transition-colors hover:text-ink"
+                className="group relative text-sm font-medium text-ink/70 transition-colors hover:text-ink"
               >
                 {link.label}
+                <span className="absolute -bottom-1 left-0 h-px w-0 bg-moss-deep transition-all duration-200 ease-out-soft group-hover:w-full" />
               </a>
             </li>
           ))}
@@ -53,7 +54,7 @@ export default function Navbar() {
 
         <a
           href="#contact"
-          className="hidden rounded-md bg-ink px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-ink-soft md:inline-block"
+          className="hidden rounded-md bg-ink px-5 py-2.5 text-sm font-medium text-paper transition-all duration-200 ease-out-soft hover:-translate-y-0.5 hover:bg-ink-soft md:inline-block"
         >
           Let&rsquo;s Talk
         </a>

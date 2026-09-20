@@ -1,53 +1,76 @@
+import { projects } from "../data/projects";
+
+/**
+ * A layered stack of browser-style frames showing real project previews
+ * (pulled straight from src/data/projects.ts, so swapping a project's
+ * `image` there updates this automatically). The front frame is crisp
+ * and full-size; the two behind it are smaller, dimmed, and offset to
+ * suggest depth without heavy 3D effects.
+ */
 export default function HeroVisual() {
+  const [front, back, tuck] = projects;
+
+  return (
+    <div className="relative mx-auto w-full max-w-md" aria-hidden="true">
+      <div className="relative aspect-[4/5]">
+        {/* Third frame, tucked furthest back */}
+        {tuck && (
+          <div className="absolute right-2 top-0 w-[62%] -rotate-[6deg] overflow-hidden rounded-lg border border-ink-line/25 bg-paper-card opacity-70 shadow-card">
+            <BrowserChrome compact />
+            <img
+              src={tuck.image}
+              alt=""
+              className="aspect-[8/5] w-full object-cover"
+            />
+          </div>
+        )}
+
+        {/* Second frame */}
+        {back && (
+          <div className="absolute left-0 top-6 w-[70%] rotate-[5deg] overflow-hidden rounded-lg border border-ink-line/30 bg-paper-card opacity-90 shadow-card">
+            <BrowserChrome compact />
+            <img
+              src={back.image}
+              alt=""
+              className="aspect-[8/5] w-full object-cover"
+            />
+          </div>
+        )}
+
+        {/* Front frame — the focal point */}
+        {front && (
+          <div className="absolute bottom-0 right-0 w-[82%] -rotate-[2deg] overflow-hidden rounded-xl border border-ink-line/40 bg-paper-card shadow-frame">
+            <BrowserChrome />
+            <img
+              src={front.image}
+              alt={`Preview of the ${front.title} demo website`}
+              className="aspect-[8/5] w-full object-cover"
+            />
+          </div>
+        )}
+
+        {/* Small label chip anchoring the stack to "Selected Work" */}
+        <div className="absolute -left-2 -top-2 flex items-center gap-2 rounded-full border border-ink-line/20 bg-ink px-3.5 py-2 shadow-card sm:-left-4 sm:-top-3">
+          <span className="h-1.5 w-1.5 rounded-full bg-moss" />
+          <span className="text-xs font-medium text-paper/85">
+            Demo previews
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function BrowserChrome({ compact = false }: { compact?: boolean }) {
   return (
     <div
-      className="relative mx-auto w-full max-w-md aspect-[4/5] select-none"
-      aria-hidden="true"
+      className={`flex items-center gap-1.5 border-b border-ink-line/15 ${
+        compact ? "px-3 py-2" : "px-4 py-2.5"
+      }`}
     >
-      {/* Back window — real-estate style listing card */}
-      <div className="absolute right-0 top-4 w-[78%] rotate-[4deg] rounded-xl border border-ink-line/40 bg-paper-card shadow-card">
-        <div className="flex items-center gap-1.5 border-b border-ink-line/20 px-4 py-3">
-          <span className="h-2 w-2 rounded-full bg-ink/15" />
-          <span className="h-2 w-2 rounded-full bg-ink/15" />
-          <span className="h-2 w-2 rounded-full bg-ink/15" />
-        </div>
-        <div className="space-y-3 p-5">
-          <div className="h-24 rounded-md bg-moss-light" />
-          <div className="h-2.5 w-3/4 rounded-full bg-ink/10" />
-          <div className="h-2.5 w-1/2 rounded-full bg-ink/10" />
-        </div>
-      </div>
-
-      {/* Front window — restaurant/menu style card */}
-      <div className="absolute left-0 bottom-6 w-[72%] -rotate-[3deg] rounded-xl border border-ink-line/40 bg-ink shadow-card">
-        <div className="flex items-center gap-1.5 border-b border-paper/10 px-4 py-3">
-          <span className="h-2 w-2 rounded-full bg-paper/25" />
-          <span className="h-2 w-2 rounded-full bg-paper/25" />
-          <span className="h-2 w-2 rounded-full bg-paper/25" />
-        </div>
-        <div className="space-y-3 p-5">
-          <div className="h-2.5 w-2/3 rounded-full bg-paper/40" />
-          <div className="h-2.5 w-5/6 rounded-full bg-paper/20" />
-          <div className="h-2.5 w-1/2 rounded-full bg-paper/20" />
-          <div className="mt-4 h-9 w-28 rounded-md bg-moss" />
-        </div>
-      </div>
-
-      {/* Floating accent chip */}
-      <div className="absolute -left-3 top-1/2 flex h-16 w-16 -translate-y-1/2 items-center justify-center rounded-full bg-moss shadow-card">
-        <svg
-          width="26"
-          height="26"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#F6F2EA"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M4 4h16v12H7l-3 3V4z" />
-        </svg>
-      </div>
+      <span className="h-2 w-2 rounded-full bg-ink/15" />
+      <span className="h-2 w-2 rounded-full bg-ink/15" />
+      <span className="h-2 w-2 rounded-full bg-ink/15" />
     </div>
   );
 }

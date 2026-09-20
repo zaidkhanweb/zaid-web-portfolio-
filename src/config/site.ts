@@ -20,15 +20,19 @@ export const WHATSAPP_NUMBER = "ADD_WHATSAPP_NUMBER";
 /** Contact email shown across the site. */
 export const EMAIL_ADDRESS = "ADD_EMAIL_ADDRESS";
 
-export const WHATSAPP_LINK =
-  WHATSAPP_NUMBER === "ADD_WHATSAPP_NUMBER"
-    ? "#"
-    : `https://wa.me/${WHATSAPP_NUMBER}`;
+/** True once a real WhatsApp number has been added above. */
+export const WHATSAPP_READY = WHATSAPP_NUMBER !== "ADD_WHATSAPP_NUMBER";
 
-export const EMAIL_LINK =
-  EMAIL_ADDRESS === "ADD_EMAIL_ADDRESS"
-    ? "#"
-    : `mailto:${EMAIL_ADDRESS}?subject=Website%20enquiry`;
+/** True once a real email address has been added above. */
+export const EMAIL_READY = EMAIL_ADDRESS !== "ADD_EMAIL_ADDRESS";
+
+export const WHATSAPP_LINK = WHATSAPP_READY
+  ? `https://wa.me/${WHATSAPP_NUMBER}`
+  : "#";
+
+export const EMAIL_LINK = EMAIL_READY
+  ? `mailto:${EMAIL_ADDRESS}?subject=Website%20enquiry`
+  : "#";
 
 export const SITE_NAME = "Zaid";
 export const SITE_BRAND = "ZAID WEB";

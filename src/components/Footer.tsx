@@ -1,4 +1,13 @@
-import { EMAIL_ADDRESS, EMAIL_LINK, NAV_LINKS, SITE_BRAND, WHATSAPP_LINK, WHATSAPP_NUMBER } from "../config/site";
+import {
+  EMAIL_ADDRESS,
+  EMAIL_LINK,
+  EMAIL_READY,
+  NAV_LINKS,
+  SITE_BRAND,
+  WHATSAPP_LINK,
+  WHATSAPP_NUMBER,
+  WHATSAPP_READY,
+} from "../config/site";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -27,17 +36,24 @@ export default function Footer() {
         </nav>
 
         <div className="flex flex-col gap-2 text-sm text-ink/60">
-          <a
-            href={WHATSAPP_LINK}
-            target={WHATSAPP_LINK === "#" ? undefined : "_blank"}
-            rel={WHATSAPP_LINK === "#" ? undefined : "noreferrer"}
-            className="hover:text-ink"
-          >
-            {WHATSAPP_NUMBER === "ADD_WHATSAPP_NUMBER" ? "WhatsApp" : WHATSAPP_NUMBER}
-          </a>
-          <a href={EMAIL_LINK} className="hover:text-ink">
-            {EMAIL_ADDRESS === "ADD_EMAIL_ADDRESS" ? "Email" : EMAIL_ADDRESS}
-          </a>
+          {WHATSAPP_READY ? (
+            <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="hover:text-ink">
+              {WHATSAPP_NUMBER}
+            </a>
+          ) : (
+            <span aria-disabled="true" className="cursor-not-allowed text-ink/35">
+              WhatsApp
+            </span>
+          )}
+          {EMAIL_READY ? (
+            <a href={EMAIL_LINK} className="hover:text-ink">
+              {EMAIL_ADDRESS}
+            </a>
+          ) : (
+            <span aria-disabled="true" className="cursor-not-allowed text-ink/35">
+              Email
+            </span>
+          )}
         </div>
       </div>
 

@@ -1,24 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="Placeholder preview of the Karachi Prime Estate demo website">
-  <rect width="800" height="520" fill="#EDE8DE"/>
-  <rect x="40" y="40" width="720" height="440" rx="10" fill="#FFFDF9" stroke="#DED5C2" stroke-width="1.5"/>
-  <rect x="40" y="40" width="720" height="46" rx="10" fill="#7C5A32"/>
-  <circle cx="66" cy="63" r="5" fill="#F6F2EA" opacity="0.5"/>
-  <circle cx="84" cy="63" r="5" fill="#F6F2EA" opacity="0.5"/>
-  <circle cx="102" cy="63" r="5" fill="#F6F2EA" opacity="0.5"/>
-  <rect x="70" y="120" width="300" height="24" fill="#7C5A32"/>
-  <rect x="70" y="158" width="380" height="12" fill="#C9C2B2"/>
-  <g>
-    <rect x="70" y="220" width="200" height="140" rx="8" fill="#F1E7D4" stroke="#B8935B" stroke-width="1.5"/>
-    <rect x="290" y="220" width="200" height="140" rx="8" fill="#F1E7D4" stroke="#B8935B" stroke-width="1.5"/>
-    <rect x="510" y="220" width="200" height="140" rx="8" fill="#F1E7D4" stroke="#B8935B" stroke-width="1.5"/>
-    <rect x="90" y="240" width="160" height="66" rx="4" fill="#B8935B"/>
-    <rect x="310" y="240" width="160" height="66" rx="4" fill="#B8935B"/>
-    <rect x="530" y="240" width="160" height="66" rx="4" fill="#B8935B"/>
-    <rect x="90" y="320" width="120" height="10" fill="#7C5A32"/>
-    <rect x="310" y="320" width="120" height="10" fill="#7C5A32"/>
-    <rect x="530" y="320" width="120" height="10" fill="#7C5A32"/>
-    <rect x="90" y="338" width="70" height="8" fill="#C9BBA1"/>
-    <rect x="310" y="338" width="70" height="8" fill="#C9BBA1"/>
-    <rect x="530" y="338" width="70" height="8" fill="#C9BBA1"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-label="Placeholder preview of the Karachi Prime Estate demo website">
+  <rect width="960" height="600" fill="#ECE5D8"/>
+  <rect x="30" y="30" width="900" height="540" rx="14" fill="#FFFDF9" stroke="#DED5C2" stroke-width="1.5"/>
+
+  <rect x="30" y="30" width="900" height="46" rx="14" fill="#7C5A32"/>
+  <circle cx="58" cy="53" r="5" fill="#F6F2EA" opacity="0.5"/>
+  <circle cx="76" cy="53" r="5" fill="#F6F2EA" opacity="0.5"/>
+  <circle cx="94" cy="53" r="5" fill="#F6F2EA" opacity="0.5"/>
+  <rect x="430" y="42" width="200" height="22" rx="11" fill="#F6F2EA" opacity="0.12"/>
+
+  <rect x="66" y="104" width="90" height="16" rx="4" fill="#7C5A32"/>
+  <rect x="700" y="108" width="50" height="8" rx="4" fill="#C9C2B2"/>
+  <rect x="766" y="108" width="50" height="8" rx="4" fill="#C9C2B2"/>
+  <rect x="832" y="108" width="60" height="8" rx="4" fill="#C9C2B2"/>
+
+  <rect x="66" y="168" width="300" height="20" rx="4" fill="#7C5A32"/>
+  <rect x="66" y="198" width="230" height="10" rx="5" fill="#C9C2B2"/>
+  <rect x="66" y="216" width="180" height="10" rx="5" fill="#C9C2B2"/>
+
+  <rect x="66" y="256" width="266" height="180" rx="8" fill="#F1E7D4" stroke="#B8935B" stroke-width="1.5"/>
+  <rect x="348" y="256" width="266" height="180" rx="8" fill="#F1E7D4" stroke="#B8935B" stroke-width="1.5"/>
+  <rect x="630" y="256" width="266" height="180" rx="8" fill="#F1E7D4" stroke="#B8935B" stroke-width="1.5"/>
+
+  <rect x="86" y="276" width="226" height="96" rx="4" fill="#B8935B"/>
+  <rect x="368" y="276" width="226" height="96" rx="4" fill="#B8935B"/>
+  <rect x="650" y="276" width="226" height="96" rx="4" fill="#B8935B"/>
+
+  <rect x="86" y="386" width="150" height="12" fill="#7C5A32"/>
+  <rect x="368" y="386" width="150" height="12" fill="#7C5A32"/>
+  <rect x="650" y="386" width="150" height="12" fill="#7C5A32"/>
+  <rect x="86" y="406" width="90" height="9" fill="#C9BBA1"/>
+  <rect x="368" y="406" width="90" height="9" fill="#C9BBA1"/>
+  <rect x="650" y="406" width="90" height="9" fill="#C9BBA1"/>
+
+  <line x1="66" y1="466" x2="894" y2="466" stroke="#DED5C2" stroke-width="1.5"/>
+  <rect x="66" y="490" width="130" height="8" rx="4" fill="#C9C2B2"/>
+  <rect x="760" y="490" width="134" height="8" rx="4" fill="#C9C2B2"/>
 </svg>
