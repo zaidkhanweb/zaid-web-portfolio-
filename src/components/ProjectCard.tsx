@@ -19,10 +19,10 @@ export default function ProjectCard({ project, reverse = false, index }: Project
         <img
           src={project.image}
           alt={`Preview of the ${project.title} ${project.category.toLowerCase()} demo website`}
-          className="aspect-[8/5] w-full object-cover transition-transform duration-500 ease-out-soft group-hover:scale-[1.02]"
+          className="aspect-[16/9] w-full object-cover object-top transition-transform duration-500 ease-out-soft group-hover:scale-[1.02]"
           loading="lazy"
         />
-        <span className="absolute left-4 top-4 rounded-full bg-ink/85 px-3 py-1 text-xs font-medium text-paper backdrop-blur-sm">
+        <span className="absolute bottom-4 right-4 rounded-full bg-ink/85 px-3 py-1 text-xs font-medium text-paper backdrop-blur-sm">
           {project.status}
         </span>
       </div>
@@ -44,7 +44,7 @@ export default function ProjectCard({ project, reverse = false, index }: Project
         <a
           href={project.url}
           target={project.url === "#" ? undefined : "_blank"}
-          rel={project.url === "#" ? undefined : "noreferrer"}
+          rel={project.url === "#" ? undefined : "noopener noreferrer"}
           className="group mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-moss-deep transition-colors hover:text-moss"
         >
           View Live Site

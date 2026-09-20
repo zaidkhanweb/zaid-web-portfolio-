@@ -20,8 +20,8 @@ Open the local URL Vite prints (usually `http://localhost:5173`).
    - `SITE_URL`: your live domain once you have one.
 
 2. **Project screenshots** — `src/data/projects.ts`
-   - Each project currently points at a placeholder graphic in `public/projects/`.
-   - Replace `image` with a real screenshot (drop the file into `public/projects/` and update the path), and update `url` once each demo is deployed somewhere.
+   - Each project uses a real screenshot in `public/projects/` (16:9 works best) and links to its deployed demo via `url`.
+   - To swap a screenshot, drop the new file into `public/projects/` and update the `image` path.
 
 3. **SEO metadata** — `index.html`
    - Update the canonical URL, Open Graph URL, and Twitter/OG image URLs once you have a real domain.
@@ -48,6 +48,6 @@ src/
   data/projects.ts Editable project/demo data
   hooks/           useRevealOnScroll (scroll-reveal, respects prefers-reduced-motion)
 public/
-  projects/        Placeholder project preview graphics (SVG)
+  projects/        Real project screenshots (PNG)
   favicon.svg, robots.txt, sitemap.xml
 ```

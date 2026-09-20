@@ -20,7 +20,7 @@ export default function HeroVisual() {
             <img
               src={tuck.image}
               alt=""
-              className="aspect-[8/5] w-full object-cover"
+              className="aspect-[16/9] w-full object-cover object-top"
             />
           </div>
         )}
@@ -32,7 +32,7 @@ export default function HeroVisual() {
             <img
               src={back.image}
               alt=""
-              className="aspect-[8/5] w-full object-cover"
+              className="aspect-[16/9] w-full object-cover object-top"
             />
           </div>
         )}
@@ -44,7 +44,7 @@ export default function HeroVisual() {
             <img
               src={front.image}
               alt={`Preview of the ${front.title} demo website`}
-              className="aspect-[8/5] w-full object-cover"
+              className="aspect-[16/9] w-full object-cover object-top"
             />
           </div>
         )}

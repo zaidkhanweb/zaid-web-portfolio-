@@ -1,8 +1,8 @@
 // -----------------------------------------------------------------------
 // PROJECT DATA
 // One entry per demo project shown in the "Selected Work" section.
-// Replace `image`, `url`, and copy as real screenshots/links become
-// available. `status` should stay "Demo Project" unless a project
+// `image` points at a real screenshot in /public/projects/ and `url` at the
+// deployed demo. `status` should stay "Demo Project" unless a project
 // becomes an actual paid client build.
 // -----------------------------------------------------------------------
 
@@ -12,9 +12,9 @@ export type Project = {
   category: string;
   status: "Demo Project" | "Concept Project";
   description: string;
-  /** Path under /public, or a full URL to a real screenshot. */
+  /** Path under /public, or a full URL to a real screenshot (~16:9). */
   image: string;
-  /** Live URL if deployed, or "#" as a placeholder. */
+  /** Live URL of the deployed demo (opens in a new tab). */
   url: string;
   /** Accent used for this project's card artwork. */
   accent: string;
@@ -28,8 +28,8 @@ export const projects: Project[] = [
     status: "Demo Project",
     description:
       "A concept site for a car detailing business, built to show off before-and-after work and make booking a slot straightforward.",
-    image: "/projects/detailing-lab.svg",
-    url: "#",
+    image: "/projects/detailing-lab.png",
+    url: "https://detailing-lab-website.vercel.app/",
     accent: "#1F2937",
   },
   {
@@ -39,19 +39,19 @@ export const projects: Project[] = [
     status: "Demo Project",
     description:
       "A calm, trustworthy layout for a dental clinic, designed around services, clinic hours, and a clear way to book an appointment.",
-    image: "/projects/bari-dental.svg",
-    url: "#",
+    image: "/projects/bari-dental.png",
+    url: "https://bari-dental-clinic-nine.vercel.app/",
     accent: "#2F6B57",
   },
   {
     id: "karachi-prime-estate",
-    title: "Karachi Prime Estate",
+    title: "DHA Karachi Real Estate",
     category: "Real Estate",
     status: "Demo Project",
     description:
       "A listings-first concept for a real estate agency, built to present properties clearly and route serious buyers straight to contact.",
-    image: "/projects/karachi-prime-estate.svg",
-    url: "#",
+    image: "/projects/karachi-real-estate.png",
+    url: "https://dha-karachi-dwellings.vercel.app/",
     accent: "#7C5A32",
   },
   {
@@ -61,8 +61,8 @@ export const projects: Project[] = [
     status: "Demo Project",
     description:
       "A menu-forward restaurant concept focused on food photography, opening hours, and easy reservations or takeout enquiries.",
-    image: "/projects/cafeteria-america.svg",
-    url: "#",
+    image: "/projects/cafeteria-america.png",
+    url: "https://restaurant-website-nine-gold-19.vercel.app/",
     accent: "#8C3B2E",
   },
 ];
